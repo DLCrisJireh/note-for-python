@@ -1,1 +1,19 @@
-dsafd
+#numpy
+
+# a rows, b columns, type: <class 'numpy.ndarray'>; 生成a行b列的零array
+A = np.zeros((a,b)) 
+
+# 1*N zero-array; 生成N个零元素的array
+A = np.zeros(N) 
+
+# a classes, total number is b; 0：（a-1）之间随机选取b个数，可重复，并从小到大排序
+gt = np.random.randint(a,size=b) 
+gt.sort()
+
+#average, medium, sdv, var; 求评价，中位数，标准差，方差
+#gaussian distribtuion; 高斯分布, 生成n个平均数为0，标准差为sigma的数
+A = sigma * np.random.randn(n)
+np.means(A)
+np.median(A)
+np.std(A) #有偏标准差，即除以n
+np.std(A,ddof = 1) #无偏标准差，即除以（n-1）
