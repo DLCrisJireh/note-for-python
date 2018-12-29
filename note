@@ -18,11 +18,16 @@ np.median(A)
 np.std(A) #有偏标准差，即除以n
 np.std(A,ddof = 1) #无偏标准差，即除以（n-1）
 
+#sum; 求和
+a = np.sum(A,axis=1) #求行和
+a = np.sum(A,axis=0) #求列和
+
 #combine list; 合并数组
 a = [[1,2,3],[4,5,6]]
 b = [[1,1,1],[2,2,2]]
 c = np.vstack((a,b)) #竖直方向合并
 d = np.hstack((a,b)) #水平方向合并
+e = a+b #合并，将b的元素添加至a的后方
 
 #import random
 #uniform distribution; 均匀分布
