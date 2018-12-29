@@ -60,7 +60,7 @@ for i in range(5):
             
  #关于list和np.array
  list只有len
- array只有shape
+ array只有shape，size （这个数组中有多少个元素）
  
  #plot;plt; 作图
  #import matplotlib.pyplot as plt
