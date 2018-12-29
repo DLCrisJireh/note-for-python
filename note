@@ -22,12 +22,29 @@ np.std(A,ddof = 1) #无偏标准差，即除以（n-1）
 a = np.sum(A,axis=1) #求行和
 a = np.sum(A,axis=0) #求列和
 
+#pow；对list a中的每个元素 乘方x
+aa = np.power(a,x)
+
+#diagonalization；对角化
+A = np.diag(A)
+
 #combine list; 合并数组
 a = [[1,2,3],[4,5,6]]
 b = [[1,1,1],[2,2,2]]
 c = np.vstack((a,b)) #竖直方向合并
 d = np.hstack((a,b)) #水平方向合并
 e = a+b #合并，将b的元素添加至a的后方
+
+#矩阵乘法
+a@np.transpose(b)
+
+#对list中的每个数进行处理
+for i in range(len(a)):
+    a[i] = [j+1 for j in a[i]]
+print(a)
+
+#或将list转化为数组处理
+a = np.array(a)
 
 #import random
 #uniform distribution; 均匀分布
@@ -41,4 +58,16 @@ for i in range(5):
         if j > 5:
             break
             
+ #关于list和np.array
+ list只有len
+ array只有shape
+ 
+ #plot;plt; 作图
+ #import matplotlib.pyplot as plt
+ 
+ #点与x坐标轴相连
+ a = range(1,5)
+ plt.stem(a)
+ plt.show()
+ 
  
