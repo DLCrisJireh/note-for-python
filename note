@@ -62,12 +62,31 @@ for i in range(5):
  list只有len
  array只有shape，size （这个数组中有多少个元素）
  
+ #str大小写转化
+ s = 'A mUltiCased string'.upper()
+ s = 'A mUltiCased string'.lower()
+
+ 
  #plot;plt; 作图
  #import matplotlib.pyplot as plt
+ #from matplotlib import cm 
+ #from matplotlib import axes
+ #from mpl_toolkits.mplot3d import Axes3D
  
  #点与x坐标轴相连
  a = range(1,5)
  plt.stem(a)
+ plt.show()
+ 
+ #3D作图
+ kkk = np.arange(0,len(data))
+ ax = plt.subplot(111,projection = '3d')
+ plt.axis('equal')
+ ax.scatter(x,y,z,c=kkk)
+ ax.set_zlabel('3rdDF')  # corrdinate
+ ax.set_ylabel('2ndDF')
+ ax.set_xlabel('1stDF')
+ plt.savefig('name.png')
  plt.show()
  
  
